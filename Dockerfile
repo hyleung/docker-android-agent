@@ -21,4 +21,7 @@ RUN chmod g+w -R /usr/local/android-sdk-linux
 
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --all --filter 1,2,3,4
 
+#Install the SDK platform
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --all --filter 14,16,17,18,19,20
+
 
