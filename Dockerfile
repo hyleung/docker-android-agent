@@ -18,5 +18,8 @@ RUN chown -R root:root /usr/local/android-sdk-linux
 RUN chmod g+w -R /usr/local/android-sdk-linux
 
 #Install the SDK tools
-RUN echo y | /usr/local/android-sdk-linux/tools-temp/android update sdk --no-ui --all --filter 1,2,3,4
+ENV ANDROID_HOME /usr/local/android-sdk-linux
+ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --filter platform-tools,build-tools,extra-android-support
 
