@@ -23,9 +23,15 @@ ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --filter platform-tools,build-tools
 
+#Build tools 19.1.0
+ENV ANDROID_HOME /usr/local/android-sdk-linux
+ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui -a --filter build-tools-19.1.0
+
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --filter android-20,android-19,android-18,android-17,android-16
+
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --filter extra-android-support
