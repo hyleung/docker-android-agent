@@ -11,7 +11,7 @@ RUN curl http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz -o ~/temp/an
 #Android is compile for 32-bit systems, install the 32-bit versions of dependencies
 # http://askubuntu.com/questions/147400/problems-with-eclipse-and-android-sdk
 
-RUN apt-get -y install lib32z1 lib32ncurses5 lib32bz2-1.0
+RUN apt-get -y install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 
 #Unzip
 RUN tar zvxf ~/temp/android-sdk.tgz -C /usr/local
