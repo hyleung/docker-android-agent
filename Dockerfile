@@ -34,3 +34,6 @@ RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --fil
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --filter extra-google-google_play_services
+
+RUN chmod -R 777  /tmp/
+
